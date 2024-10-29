@@ -2,6 +2,7 @@ package org.rafiyad;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class FirstTest {
     public static void main(String[] args) throws InterruptedException {
@@ -10,12 +11,14 @@ public class FirstTest {
         //test page title should be "Buy Islamic Books - Online Book Shop in Bangladesh | Wafilife"
 
         //close the browser
+        String targetTitle = "Buy Islamic Books - Online Book Shop in Bangladesh | Wafilife";
 
-        WebDriver driver =new ChromeDriver();
-
-        Thread.sleep(2000);
-
-        driver.close();
+        WebDriver browser =new ChromeDriver();
+        browser.get("https://www.wafilife.com/");
+        String titleOfWebsite=browser.getTitle();
+        System.out.println(titleOfWebsite);
+        
+        browser.close();
 
     }
 }
