@@ -7,3 +7,7 @@
 - fill up address
 - checkout
 - log out
+
+
+
+git added to my local repository
