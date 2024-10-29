@@ -1,2 +1,2 @@
-1. sign up
-2. login
+1. Add selenium-java dependency
+2. Add testng dependency (disable default junit)

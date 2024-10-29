@@ -1,4 +1,4 @@
-package org.example;
+package org.rafiyad;
 
 /**
  * Hello world!
