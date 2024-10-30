@@ -9,20 +9,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class FirstTest {
-    
-    WebDriver browser;
-
-    @BeforeMethod
-    public WebDriver openBrowser(){
-        browser= new FirefoxDriver();
-        return browser;
-    }
-
-    @AfterMethod
-    public void closeBrowser(){
-        browser.close();
-    }
+public class FirstTest extends BrowserSetup {
 
     @Test
     public void testPageTitle(){
@@ -34,6 +21,7 @@ public class FirstTest {
 
         //String titleOfWebsite=browser.getTitle();
         //System.out.println(titleOfWebsite);
+
 
         Assert.assertEquals(browser.getTitle(),targetTitle);
 
