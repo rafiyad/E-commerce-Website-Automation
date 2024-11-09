@@ -104,13 +104,35 @@ public class LocatorBasic extends BrowserSetup{
 
         Random random = new Random();
         int randomWriterIndex = random.nextInt(listOfWriters.size());
-
+        System.out.println("index writer selected "+randomWriterIndex);
         WebElement selectedWriter= listOfWriters.get(randomWriterIndex);
 
         selectedWriter.click();
 
+        Thread.sleep(2000);
+
+        //Save all books in a list and peek a random book
+        List<WebElement> listOfBooks = browser.findElements(By.xpath("//div[@class='product_thumbnail_wrapper']//a"));
+        int randomBook = random.nextInt(listOfBooks.size());
+        System.out.println("index selected "+randomBook+" from "+listOfBooks.size());
+        WebElement selectedBook= listOfBooks.get(randomBook);
+        //book clicked
+        selectedBook.click();
+
+
+        //check if //p[@class='stock out-of-stock'] is there then then go to the privious two steps by window.back
+
+        browser.findElement(By.xpath("//div[@class='body-wrapper']//button[2]")).click();
+
         Thread.sleep(5000);
 
+        browser.findElement(By.xpath("//span[contains(text(),'অর্ডার সম্পন্ন করুন')]")).click();
+
+        Thread.sleep(5000);
+
+        //create ramdom function to get random file
+
+        //if else if bookout of stock try again
 
     }
 
