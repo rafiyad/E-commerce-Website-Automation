@@ -1,6 +1,8 @@
 package org.rafiyad;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
@@ -17,6 +19,10 @@ public class BrowserSetup {
     }
     @AfterSuite
     public void closeBrowser(){
-        browser.close();
+        browser.quit();
+    }
+
+    public WebElement getWebElement(By locator){
+        return browser.findElement(locator);
     }
 }
