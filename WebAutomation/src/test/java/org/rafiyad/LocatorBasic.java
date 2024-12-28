@@ -16,13 +16,6 @@ public class LocatorBasic extends BrowserSetup{
         browser.get("https://www.wafilife.com/");
         Thread.sleep(2000);
 
-        /* Account details
-        Name: rafiyadtest
-        mobile: 01878045502
-        email: rafiyadtest@gmail.com
-        password: tT00998877@#
-        */
-
         /*WebElement regLoginButton= browser.findElement(By.linkText("লগইন / রেজিস্টার"));
         Thread.sleep(2000);
         regLoginButton.click();
